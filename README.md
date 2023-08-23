@@ -1,2 +1,2 @@
 # cbbh_toolkit
-Tools and Code used while studying for CBBH.
+Useful tools for the HTB CBBH training and exam.
