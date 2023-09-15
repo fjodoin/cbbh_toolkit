@@ -3,7 +3,7 @@ import requests
 import os.path
 
 # define target url, change as needed
-url = "http://localhost/vuln_php_timing.php"
+url = "http://94.237.48.48:48817/question3/"
 
 # define a fake headers to present ourself as Chromium browser, change if needed
 headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36"}

