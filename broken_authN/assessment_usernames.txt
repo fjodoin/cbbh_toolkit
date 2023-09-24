@@ -1,0 +1,10 @@
+admin.cn
+admin.gr
+admin.it
+admin.uk
+admin.us
+support.cn
+support.gr
+support.it
+support.uk
+support.us
