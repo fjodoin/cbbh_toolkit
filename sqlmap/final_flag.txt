@@ -1,0 +1,14 @@
+POST /action.php HTTP/1.1
+Host: 94.237.54.59:54472
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: 94.237.54.59:54472/shop.html
+Content-Type: application/json
+Content-Length: 8
+Origin: 94.237.54.59:54472
+DNT: 1
+Connection: close
+
+{"id":1}
